@@ -1,0 +1,366 @@
+/**
+ * variables.css
+ * A comprehensive system of design variables for building consistent interfaces
+ */
+
+ :root {
+ 
+   
+   /* Primary Colors */
+   --clr-p: #0070f3;       /*  primary color*/
+   --clr-pl: #3291ff;      /*  primary color light*/
+   --clr-pd: #0761d1;      /*  primary color dark*/
+   
+   /* Secondary Colors */
+   --clr-s: #7928ca;       /* secondary color */
+   --clr-sl: #8a3fd1;      /* secondary color light*/
+   --clr-sd: #6821ac;      /* secondary color dark */
+   
+   /* Semantic Colors */
+   --clr-succ: #0ca678;    /*success*/
+   --clr-succl: #2bbd8e;   /*success light*/
+   --clr-succd: #099268;   /*success dark*/
+   
+   --clr-warn: #f59f00;    /*warning*/
+   --clr-warnl: #ffbc2c;   /*warning light*/
+   --clr-warnd: #e67700;   /*warning dark*/
+   
+   --clr-dngr: #f31717;    /*danger*/
+   --clr-dngrl: #ff4081;   /*danger light*/
+   --clr-dngrd: #d10d54;   /*danger dark*/
+   
+   --clr-info: #0084ff;    /*info*/
+   --clr-infol: #3d9aff;   /*info light*/
+   --clr-infod: #0068cc;   /*info dark*/
+   
+   /* Background & Surface Colors */
+   --clr-bg: #ffffff;             /*background*/
+   --clr-surf: #f9fafb;           /*surface*/
+   --clr-surf-r: #ffffff;         /*surface raised*/
+   --clr-surf-s: #f3f4f6;         /*surface sunken*/
+   
+   /* Text Colors */
+   --clr-txt-p: #1f2937;          /*text primary*/
+   --clr-txt-s: #6b7280;          /*text secondary*/
+   --clr-txt-t: #9ca3af;          /*text tertiary*/
+   --clr-txt-d: #d1d5db;          /*text disabled*/
+   --clr-txt-i: #ffffff;          /*text inverse*/
+   
+
+   
+   
+   
+   /* Font Families */
+   --ff-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   --ff-head: var(--ff-base);
+   --ff-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+   --ff-new: "Newsreader", serif;
+   
+   /* Font Sizes */
+   --fs-base: 1rem;          /* 16px - Base size */
+   --fs-xs: 0.75rem;         /* 12px */
+   --fs-sm: 0.875rem;        /* 14px */
+   --fs-md: 1rem;            /* 16px */
+   --fs-lg: 1.125rem;        /* 18px */
+   --fs-xl: 1.25rem;         /* 20px */
+   --fs-2xl: 1.5rem;         /* 24px */
+   
+   /* Heading Font Sizes */
+   --fs-h1: 2.5rem;          /* 40px */
+   --fs-h2: 2rem;            /* 32px */
+   --fs-h3: 1.75rem;         /* 28px */
+   --fs-h4: 1.5rem;          /* 24px */
+   --fs-h5: 1.25rem;         /* 20px */
+   --fs-h6: 1.125rem;        /* 18px */
+   
+   /* Font Weights */
+   --fw-light: 300;
+   --fw-norm: 400;
+   --fw-med: 500;
+   --fw-semi: 600;
+   --fw-bold: 700;
+   --fw-xbold: 800;
+   
+   /* Line Heights */
+   --lh-none: 1;
+   --lh-tight: 1.25;
+   --lh-snug: 1.375;
+   --lh-norm: 1.5;
+   --lh-relax: 1.625;
+   --lh-loose: 2;
+   
+   /* Letter Spacing */
+   --ls-tighter: -0.05em;
+   --ls-tight: -0.025em;
+   --ls-norm: 0em;
+   --ls-wide: 0.025em;
+   --ls-wider: 0.05em;
+   --ls-widest: 0.1em;
+   
+  
+   
+   /* Text Alignment */
+   --txt-align-l: left;
+   --txt-align-c: center;
+   --txt-align-r: right;
+   --txt-align-j: justify;
+   
+   /* Text Transform */
+   --txt-upper: uppercase;
+   --txt-lower: lowercase;
+   --txt-cap: capitalize;
+   --txt-norm: none;
+   
+   /* Text Decoration */
+   --txt-under: underline;
+   --txt-strike: line-through;
+   --txt-none: none;
+   
+   /* Text Color */
+   --txt-def: var(--clr-txt-p);
+   --txt-muted: var(--clr-txt-s);
+   --txt-subtle: var(--clr-txt-t);
+   --txt-dsbl: var(--clr-txt-d);
+   --txt-inv: var(--clr-txt-i);
+   --txt-link: var(--clr-p);
+   
+   /* Text Background */
+   --txt-bg-def: transparent;
+   --txt-bg-hi: rgba(0, 112, 243, 0.1);
+   --txt-bg-sel: rgba(0, 112, 243, 0.2);
+   
+
+   
+   /* Base Spacing Unit: 4px = 0.25rem */
+   --sp-base: 0.25rem;
+   
+   /* Spacing Scale */
+   --sp-0: 0;
+   --sp-1: calc(var(--sp-base) * 1);     /* 0.25rem = 4px */
+   --sp-2: calc(var(--sp-base) * 2);     /* 0.5rem = 8px */
+   --sp-3: calc(var(--sp-base) * 3);     /* 0.75rem = 12px */
+   --sp-4: calc(var(--sp-base) * 4);     /* 1rem = 16px */
+   --sp-5: calc(var(--sp-base) * 5);     /* 1.25rem = 20px */
+   --sp-6: calc(var(--sp-base) * 6);     /* 1.5rem = 24px */
+   --sp-8: calc(var(--sp-base) * 8);     /* 2rem = 32px */
+   --sp-10: calc(var(--sp-base) * 10);   /* 2.5rem = 40px */
+   --sp-12: calc(var(--sp-base) * 12);   /* 3rem = 48px */
+   --sp-16: calc(var(--sp-base) * 16);   /* 4rem = 64px */
+   --sp-20: calc(var(--sp-base) * 20);   /* 5rem = 80px */
+   --sp-24: calc(var(--sp-base) * 24);   /* 6rem = 96px */
+   --sp-32: calc(var(--sp-base) * 32);   /* 8rem = 128px */
+   --sp-40: calc(var(--sp-base) * 40);   /* 10rem = 160px */
+   --sp-48: calc(var(--sp-base) * 48);   /* 12rem = 192px */
+   
+   /* Semantic Spacing */
+   --sp-cont-pad: var(--sp-6);           /*content padding*/
+   --sp-sect-gap: var(--sp-16);          /*section gap*/
+   --sp-comp-gap: var(--sp-4);           /*component gap*/
+   
+
+   
+   /* Border Widths */
+   --bw-none: 0;
+   --bw-thin: 1px;
+   --bw-base: 2px;
+   --bw-thick: 4px;
+   
+   /* Border Styles */
+   --bs-solid: solid;
+   --bs-dash: dashed;
+   --bs-dot: dotted;
+   
+   /* Border Radius */
+   --br-none: 0;
+   --br-sm: 0.125rem;    /* 2px */
+   --br-md: 0.25rem;     /* 4px */
+   --br-lg: 0.5rem;      /* 8px */
+   --br-xl: 0.75rem;     /* 12px */
+   --br-2xl: 1rem;       /* 16px */
+   --br-3xl: 1.5rem;     /* 24px */
+   --br-full: 9999px;
+
+      /* Border Colors */
+      --clr-bdr: #e5e7eb;            /*border*/
+      --clr-bdr-l: #f3f4f6;          /*border light*/
+      --clr-bdr-d: #d1d5db;          /*border dark*/
+   
+   /* Border Colors */
+   --b-clr-def: var(--clr-bdr);
+   --b-clr-l: var(--clr-bdr-l);
+   --b-clr-d: var(--clr-bdr-d);
+   
+   /*Shadows*/
+   --sh-none: none;
+   --sh-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+   --sh-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+   --sh-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+   --sh-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+   --sh-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+   --sh-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+   --sh-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+   
+   /* Colored shadows */
+   --sh-p: 0 4px 14px 0 rgba(0, 112, 243, 0.39);      /*primary*/
+   --sh-succ: 0 4px 14px 0 rgba(12, 166, 120, 0.39);  /*success*/
+   --sh-warn: 0 4px 14px 0 rgba(245, 159, 0, 0.39);   /*warning*/
+   --sh-dngr: 0 4px 14px 0 rgba(242, 19, 97, 0.39);   /*danger*/
+   
+   
+   --cont-pad: var(--sp-4);
+   --cont-max-w: 80rem;    /* 1280px */
+   
+   /* Container Sizes */
+   --cont-sm: 640px;
+   --cont-md: 768px;
+   --cont-lg: 1024px;
+   --cont-xl: 1280px;
+   --cont-2xl: 1536px;
+   
+  /*z-index*/
+   
+   --z-neg: -1;
+   --z-0: 0;
+   --z-1: 1;
+   --z-10: 10;
+   --z-20: 20;
+   --z-30: 30;
+   --z-40: 40;
+   --z-50: 50;
+   
+   /* Semantic Z-Index */
+   --z-bg: var(--z-neg);             /*background*/
+   --z-def: var(--z-0);              /*default*/
+   --z-drop: var(--z-10);            /*dropdown*/
+   --z-sticky: var(--z-20);          /*sticky*/
+   --z-fixed: var(--z-30);           /*fixed*/
+   --z-modal-bg: var(--z-40);        /*modal backdrop*/
+   --z-modal: var(--z-50);           /*modal*/
+   --z-pop: var(--z-50);             /*popover*/
+   --z-tip: var(--z-50);             /*tooltip*/
+   
+
+  
+
+   
+   /* Button */
+   --btn-fw: var(--fw-med);                  /*font weight*/
+   --btn-fs: var(--fs-base);                 /*font size*/
+   --btn-lh: var(--lh-norm);                 /*line height*/
+   --btn-py: var(--sp-2);                    /*padding y*/
+   --btn-px: var(--sp-4);                    /*padding x*/
+   --btn-br: var(--br-md);                   /*border radius*/
+   --btn-bw: var(--bw-thin);                 /*border width*/
+   --btn-trans: all var(--trans-fast) var(--timing-ease);
+   
+   /* Button Variants */
+   --btn-bg-p: var(--clr-p);                 /*primary background*/
+   --btn-txt-p: white;                       /*primary text*/
+   --btn-bdr-p: var(--clr-p);                /*primary border*/
+   
+   --btn-bg-s: var(--clr-s);                 /*secondary background*/
+   --btn-txt-s: white;                       /*secondary text*/
+   --btn-bdr-s: var(--clr-s);                /*secondary border*/
+   
+   --btn-bg-succ: var(--clr-succ);           /*success background*/
+   --btn-txt-succ: white;                    /*success text*/
+   --btn-bdr-succ: var(--clr-succ);          /*success border*/
+   
+   --btn-bg-dngr: var(--clr-dngr);           /*danger background*/
+   --btn-txt-dngr: white;                    /*danger text*/
+   --btn-bdr-dngr: var(--clr-dngr);          /*danger border*/
+   
+   --btn-bg-warn: var(--clr-warn);           /*warning background*/
+   --btn-txt-warn: white;                    /*warning text*/
+   --btn-bdr-warn: var(--clr-warn);          /*warning border*/
+   
+   --btn-bg-info: var(--clr-info);           /*info background*/
+   --btn-txt-info: white;                    /*info text*/
+   --btn-bdr-info: var(--clr-info);          /*info border*/
+   
+   --btn-bg-light: var(--clr-surf);          /*light background*/
+   --btn-txt-light: var(--clr-txt-p);        /*light text*/
+   --btn-bdr-light: var(--clr-bdr);          /*light border*/
+   
+   --btn-bg-dark: var(--clr-txt-p);          /*dark background*/
+   --btn-txt-dark: white;                    /*dark text*/
+   --btn-bdr-dark: var(--clr-txt-p);         /*dark border*/
+   
+   /* Button Sizes */
+   --btn-py-sm: var(--sp-1);                 /*small padding y*/
+   --btn-px-sm: var(--sp-3);                 /*small padding x*/
+   --btn-fs-sm: var(--fs-sm);                /*small font size*/
+   
+   --btn-py-lg: var(--sp-3);                 /*large padding y*/
+   --btn-px-lg: var(--sp-6);                 /*large padding x*/
+   --btn-fs-lg: var(--fs-lg);                /*large font size*/
+   
+   /* Cards */
+   --card-bg: var(--clr-surf);               /*background*/
+   --card-bdr-clr: var(--clr-bdr);           /*border color*/
+   --card-bw: var(--bw-thin);                /*border width*/
+   --card-br: var(--br-lg);                  /*border radius*/
+   --card-sh: var(--sh-md);                  /*shadow*/
+   --card-pad: var(--sp-6);                  /*padding*/
+   --card-mb: var(--sp-6);                   /*margin bottom*/
+   --card-head-pad: var(--sp-4) var(--sp-6); /*header padding*/
+   --card-foot-pad: var(--card-head-pad);    /*footer padding*/
+   
+   /* Alerts */
+   --alert-pad: var(--sp-4) var(--sp-6);     /*padding*/
+   --alert-mb: var(--sp-4);                  /*margin bottom*/
+   --alert-br: var(--br-md);                 /*border radius*/
+   --alert-bw: var(--bw-thin);               /*border width*/
+   
+   --alert-bg-info: rgba(0, 132, 255, 0.1);        /*info background*/
+   --alert-bdr-info: var(--clr-info);              /*info border*/
+   --alert-txt-info: var(--clr-txt-p);             /*info text*/
+   
+   --alert-bg-succ: rgba(12, 166, 120, 0.1);       /*success background*/
+   --alert-bdr-succ: var(--clr-succ);              /*success border*/
+   --alert-txt-succ: var(--clr-txt-p);             /*success text*/
+   
+   --alert-bg-warn: rgba(245, 159, 0, 0.1);        /*warning background*/
+   --alert-bdr-warn: var(--clr-warn);              /*warning border*/
+   --alert-txt-warn: var(--clr-txt-p);             /*warning text*/
+   
+   --alert-bg-dngr: rgba(242, 19, 97, 0.1);        /*danger background*/
+   --alert-bdr-dngr: var(--clr-dngr);              /*danger border*/
+   --alert-txt-dngr: var(--clr-txt-p);             /*danger text*/
+   
+   /* Form Controls */
+   --input-bg: var(--clr-bg);                     /*background*/
+   --input-clr: var(--clr-txt-p);                 /*color*/
+   --input-bdr-clr: var(--clr-bdr);               /*border color*/
+   --input-bw: var(--bw-thin);                    /*border width*/
+   --input-br: var(--br-md);                      /*border radius*/
+   --input-py: var(--sp-2);                       /*padding y*/
+   --input-px: var(--sp-3);                       /*padding x*/
+   --input-fs: var(--fs-base);                    /*font size*/
+   --input-ph-clr: var(--clr-txt-t);              /*placeholder color*/
+   --input-focus-bdr: var(--clr-p);               /*focus border color*/
+   --input-focus-sh: 0 0 0 0.2rem rgba(0, 112, 243, 0.25); /*focus shadow*/
+   --input-dsbl-bg: var(--clr-surf-s);            /*disabled background*/
+   
+   /* Tables */
+   --tbl-cell-pad: var(--sp-3) var(--sp-4);       /*cell padding*/
+   --tbl-bw: var(--bw-thin);                      /*border width*/
+   --tbl-bdr-clr: var(--clr-bdr);                 /*border color*/
+   --tbl-head-bg: var(--clr-surf-s);              /*head background*/
+   --tbl-head-clr: var(--clr-txt-p);              /*head color*/
+   --tbl-stripe-bg: rgba(0, 0, 0, 0.02);          /*striped background*/
+   --tbl-hover-bg: rgba(0, 0, 0, 0.04);           /*hover background*/
+ 
+  
+   
+   /* Navigation */
+   --nav-link-py: var(--sp-2);                    /*link padding y*/
+   --nav-link-px: var(--sp-4);                    /*link padding x*/
+   --nav-link-clr: var(--clr-txt-p);              /*link color*/
+   --nav-link-hover: var(--clr-p);                /*link hover color*/
+   --nav-link-active: var(--clr-p);               /*link active color*/
+   --nav-tabs-bw: var(--bw-thin);                 /*tabs border width*/
+   --nav-tabs-bdr: var(--clr-bdr);                /*tabs border color*/
+   --nav-tabs-br: var(--br-md);                   /*tabs border radius*/
+   --nav-tabs-act-bg: var(--clr-bg);              /*tabs active background*/
+}

@@ -1,0 +1,287 @@
+
+$cols: 12 !default;
+$gap: 2rem !default;
+$gap-sm: 1rem !default;
+
+$breaks: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+$max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+$rtl: false !default;
+$dir: if($rtl, rtl, ltr) !default;
+
+$bg-light: #ffffff !default;
+$text-light: #212529 !default;
+$bg-dark: #121212 !default;
+$text-dark: #f8f9fa !default;
+
+@mixin mq($bp) {
+  @if map-has-key($breaks, $bp) {
+    $min: map-get($breaks, $bp);
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: $gap-sm / 2;
+  padding-left: $gap-sm / 2;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+
+  @each $bp, $max in $max-widths {
+    @include mq($bp) {
+      max-width: $max;
+      padding-right: $gap / 2;
+      padding-left: $gap / 2;
+    }
+  }
+
+  &.container-fluid {
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$gap-sm / 2;
+  margin-left: -$gap-sm / 2;
+  box-sizing: border-box;
+
+  @each $bp, $val in $breaks {
+    @if $val > 0 {
+      @include mq($bp) {
+        margin-right: -$gap / 2;
+        margin-left: -$gap / 2;
+      }
+    }
+  }
+
+  &.row-no-gap {
+    margin-right: 0;
+    margin-left: 0;
+
+    > [class^="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  @if $dir == rtl {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap-sm;
+
+  @each $bp, $val in $breaks {
+    @if $val > 0 {
+      @include mq($bp) {
+        gap: $gap;
+      }
+    }
+  }
+
+  @if $dir == rtl {
+    direction: rtl;
+  }
+}
+
+[class^="col-"] {
+  position: relative;
+  width: 100%;
+  padding-right: $gap-sm / 2;
+  padding-left: $gap-sm / 2;
+  box-sizing: border-box;
+
+  @each $bp, $val in $breaks {
+    @if $val > 0 {
+      @include mq($bp) {
+        padding-right: $gap / 2;
+        padding-left: $gap / 2;
+      }
+    }
+  }
+}
+
+@each $bp, $val in $breaks {
+  $tag: if($val == 0, "", "-#{$bp}");
+
+  @include mq($bp) {
+    @for $i from 1 through $cols {
+      .col#{$tag}-#{$i} {
+        flex: 0 0 percentage($i / $cols);
+        max-width: percentage($i / $cols);
+      }
+    }
+
+    .col#{$tag}-auto {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+    }
+
+    .col#{$tag} {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    .order#{$tag}-first { order: -1; }
+    .order#{$tag}-last { order: $cols + 1; }
+
+    @for $i from 0 through $cols {
+      .order#{$tag}-#{$i} { order: $i; }
+    }
+
+    @for $i from 0 through ($cols - 1) {
+      .offset#{$tag}-#{$i} {
+        $off: percentage($i / $cols);
+        margin-#{if($dir == rtl, right, left)}: $off;
+      }
+    }
+  }
+}
+
+@each $bp, $val in $breaks {
+  $tag: if($val == 0, "", "-#{$bp}");
+
+  @include mq($bp) {
+    @for $i from 1 through $cols {
+      .grid-col#{$tag}-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+}
+
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.flex-row-rev { flex-direction: row-reverse; }
+.flex-col-rev { flex-direction: column-reverse; }
+
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+.flex-wrap-rev { flex-wrap: wrap-reverse; }
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-center { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+
+.content-start { align-content: flex-start; }
+.content-end { align-content: flex-end; }
+.content-center { align-content: center; }
+.content-between { align-content: space-between; }
+.content-around { align-content: space-around; }
+.content-stretch { align-content: stretch; }
+
+.self-start { align-self: flex-start; }
+.self-end { align-self: flex-end; }
+.self-center { align-self: center; }
+.self-baseline { align-self: baseline; }
+.self-stretch { align-self: stretch; }
+
+$space: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+) !default;
+
+@each $prop, $abbr in (margin: m, padding: p) {
+  @each $size, $val in $space {
+    .#{$abbr}-#{$size} { #{$prop}: $val !important; }
+    .#{$abbr}t-#{$size}, .#{$abbr}y-#{$size} { #{$prop}-top: $val !important; }
+    .#{$abbr}r-#{$size}, .#{$abbr}x-#{$size} { #{$prop}-right: $val !important; }
+    .#{$abbr}b-#{$size}, .#{$abbr}y-#{$size} { #{$prop}-bottom: $val !important; }
+    .#{$abbr}l-#{$size}, .#{$abbr}x-#{$size} { #{$prop}-left: $val !important; }
+  }
+}
+
+.d-none { display: none !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-block { display: block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+
+@each $bp in map-keys($breaks) {
+  @include mq($bp) {
+    $tag: if($bp == 'xs', "", "-#{$bp}");
+
+    .d#{$tag}-none { display: none !important; }
+    .d#{$tag}-inline { display: inline !important; }
+    .d#{$tag}-inline-block { display: inline-block !important; }
+    .d#{$tag}-block { display: block !important; }
+    .d#{$tag}-flex { display: flex !important; }
+    .d#{$tag}-grid { display: grid !important; }
+  }
+}
+
+.theme-light {
+  background-color: $bg-light;
+  color: $text-light;
+}
+
+.theme-dark {
+  background-color: $bg-dark;
+  color: $text-dark;
+}
+
+.visually-hide {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+
+  &:focus {
+    top: 0;
+  }
+}
