@@ -1,6 +1,4 @@
-
 @import url('variables.css');
-
 /*=============================================
 =             Reset & Base Styles             =
 =============================================*/
@@ -151,7 +149,7 @@ h1, h2, h3, h4, h5, h6,
 .font-new {font-family : var(--ff-new);}
 
 /* Text Colors */
-.text-primary { color: var(--clr-p); }
+.text-primary { color: var(--clr-txt-p); }
 .text-primary-light { color: var(--clr-pl); }
 .text-primary-dark { color: var(--clr-pd); }
 

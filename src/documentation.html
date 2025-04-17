@@ -1,19 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +7,11 @@
   <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="main.css">
   <style>
-    .demo-box {
-      padding: 1rem;
-      margin-bottom: 1rem;
+    .code-block {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
       border: 1px solid var(--clr-bdr);
       border-radius: var(--br-md);
     }
@@ -40,7 +26,7 @@
       border: 1px solid var(--clr-bdr);
     }
     
-    .code-block {
+    .demo-box {
       background-color: var(--clr-surf-s);
       padding: 1rem;
       border-radius: var(--br-md);
@@ -53,6 +39,7 @@
     .nav-demo {
       margin-bottom: 2rem;
     }
+
     
     .section-heading {
       margin-top: 3rem;
@@ -60,10 +47,7 @@
       border-bottom: 2px solid var(--clr-p);
     }
     
-    .component-heading {
-      margin-top: 2rem;
-      color: var(--clr-p);
-    }
+   
   </style>
 </head>
 <body>
@@ -89,17 +73,17 @@
 
   <main class="container py-8">
     <section id="getting-started">
-      <h2 class="section-heading">Getting Started</h2>
+      <h2 class="text-primary">Getting Started</h2>
       <p class="mb-4">This UI library provides a comprehensive set of utility classes and components to build modern interfaces without writing custom CSS.</p>
       
-      <h3 class="component-heading">Installation</h3>
+      <h3 class="text-secondary-dark">Installation</h3>
       <p class="mb-4">Include the CSS files in your HTML:</p>
       <div class="code-block">
         &lt;link rel="stylesheet" href="variables.css"&gt;<br>
         &lt;link rel="stylesheet" href="main.css"&gt;
       </div>
       
-      <h3 class="component-heading">Usage</h3>
+      <h3 class="text-secondary-dark">Usage</h3>
       <p>Apply the utility classes directly to your HTML elements, similar to how you would use Tailwind CSS:</p>
       <div class="code-block">
         &lt;div class="card shadow"&gt;<br>
@@ -115,7 +99,7 @@
     <section id="typography">
       <h2 class="section-heading">Typography</h2>
       
-      <h3 class="component-heading">Headings</h3>
+      <h3 class="text-secondary-dark">Headings</h3>
       <div class="demo-box">
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -133,7 +117,7 @@
         &lt;h6&gt;Heading 6&lt;/h6&gt;
       </div>
       
-      <h3 class="component-heading">Font Sizes</h3>
+      <h3 class="text-secondary-dark">Font Sizes</h3>
       <div class="demo-box">
         <p class="text-xs">Extra Small Text</p>
         <p class="text-sm">Small Text</p>
@@ -151,7 +135,7 @@
         &lt;p class="text-2xl"&gt;2X Large Text&lt;/p&gt;
       </div>
       
-      <h3 class="component-heading">Font Weights</h3>
+      <h3 class="text-secondary-dark">Font Weights</h3>
       <div class="demo-box">
         <p class="font-light">Light Font Weight</p>
         <p class="font-normal">Normal Font Weight</p>
@@ -170,7 +154,7 @@
         &lt;p class="font-extrabold"&gt;Extra Bold Font Weight&lt;/p&gt;
       </div>
       
-      <h3 class="component-heading">Line Heights</h3>
+      <h3 class="text-secondary-dark">Line Heights</h3>
       <div class="demo-box">
         <p class="leading-none">Leading None: This text has no line spacing which makes it very compact and potentially harder to read for longer content.</p>
         <p class="leading-tight">Leading Tight: This text has tight line spacing for a more compact look while still remaining readable.</p>
@@ -186,7 +170,7 @@
         &lt;p class="leading-loose"&gt;Leading Loose text example&lt;/p&gt;
       </div>
       
-      <h3 class="component-heading">Text Colors</h3>
+      <h3 class="text-secondary-dark">Text Colors</h3>
       <div class="demo-box">
         <p>Default Text Color</p>
         <p class="text-primary">Primary Text Color</p>
@@ -208,7 +192,7 @@
         &lt;p class="text-muted"&gt;Muted Text Color&lt;/p&gt;
       </div>
       
-      <h3 class="component-heading">Text Alignment</h3>
+      <h3 class="text-secondary-dark">Text Alignment</h3>
       <div class="demo-box">
         <p class="text-left">Left-aligned text</p>
         <p class="text-center">Center-aligned text</p>
@@ -236,7 +220,7 @@
         &lt;p class="normal-case"&gt;Normal case text&lt;/p&gt;
       </div>
       
-      <h3 class="component-heading">Text Decoration</h3>
+      <h3 class="text-secondary-dark">Text Decoration</h3>
       <div class="demo-box">
         <p class="underline">Underlined Text</p>
         <p class="line-through">Line-through Text</p>
@@ -248,7 +232,7 @@
         &lt;p class="no-underline"&gt;No Underline Text&lt;/p&gt;
       </div>
       
-      <h3 class="component-heading">Font Families</h3>
+      <h3 class="text-secondary-dark">Font Families</h3>
       <div class="demo-box">
         <p class="font-sans">Sans-serif Font Family</p>
         <p class="font-mono">Monospace Font Family</p>
@@ -262,7 +246,7 @@
     <section id="colors">
       <h2 class="section-heading">Colors</h2>
       
-      <h3 class="component-heading">Background Colors</h3>
+      <h3 class="text-secondary-dark">Background Colors</h3>
       <div class="demo-box">
         <div class="flex flex-wrap">
           <div>
@@ -329,7 +313,7 @@
         &lt;div class="bg-surface"&gt;Surface Background&lt;/div&gt;
       </div>
       
-      <h3 class="component-heading">Border Colors</h3>
+      <h3 class="text-secondary-dark">Border Colors</h3>
       <div class="demo-box">
         <div class="border-2 border-primary p-2 mb-2">Primary Border</div>
         <div class="border-2 border-secondary p-2 mb-2">Secondary Border</div>
@@ -353,7 +337,7 @@
     <section id="layout">
       <h2 class="section-heading">Layout</h2>
       
-      <h3 class="component-heading">Container</h3>
+      <h3 class="text-secondary-dark">Container</h3>
       <p>The <code>container</code> class creates a centered, responsive container for your content:</p>
       <div class="code-block">
         &lt;div class="container"&gt;<br>
@@ -361,7 +345,7 @@
         &lt;/div&gt;
       </div>
       
-      <h3 class="component-heading">Display</h3>
+      <h3 class="text-secondary-dark">Display</h3>
       <div class="demo-box">
         <div class="bg-surface p-2 mb-2 block">Display Block</div>
         <div class="bg-surface p-2 mb-2 inline-block">Display Inline-Block</div>
@@ -376,13 +360,25 @@
         &lt;div class="hidden"&gt;Display None&lt;/div&gt;
       </div>
       
-      <h3 class="component-heading">Flexbox</h3>
+      <h3 class="text-secondary-dark">Flexbox</h3>
       <div class="demo-box">
         <div class="flex justify-between items-center bg-surface-sunken p-4 mb-4">
           <div class="bg-primary text-inverse p-2">Flex Item 1</div>
           <div class="bg-primary text-inverse p-2">Flex Item 2</div>
           <div class="bg-primary text-inverse p-2">Flex Item 3</div>
         </div>
+        </div>
+
+        <div class="code-block">
+          &lt;div class="flex justify-between items-center"&gt;<br>
+          &nbsp;&nbsp;&lt;div&gt;Flex Item 1&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;div&gt;Flex Item 2&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;div&gt;Flex Item 3&lt;/div&gt;<br>
+          &lt;/div&gt;<br><br>
+          </div>
+
+
+        <div class="demo-box">
         
         <div class="flex flex-col items-center bg-surface-sunken p-4">
           <div class="bg-secondary text-inverse p-2 mb-2 w-full">Flex Column Item 1</div>
@@ -390,13 +386,9 @@
           <div class="bg-secondary text-inverse p-2 w-full">Flex Column Item 3</div>
         </div>
       </div>
-      <div class="code-block">
-        &lt;div class="flex justify-between items-center"&gt;<br>
-        &nbsp;&nbsp;&lt;div&gt;Flex Item 1&lt;/div&gt;<br>
-        &nbsp;&nbsp;&lt;div&gt;Flex Item 2&lt;/div&gt;<br>
-        &nbsp;&nbsp;&lt;div&gt;Flex Item 3&lt;/div&gt;<br>
-        &lt;/div&gt;<br><br>
-        
+      
+
+        <div class="code-block">
         &lt;div class="flex flex-col items-center"&gt;<br>
         &nbsp;&nbsp;&lt;div&gt;Flex Column Item 1&lt;/div&gt;<br>
         &nbsp;&nbsp;&lt;div&gt;Flex Column Item 2&lt;/div&gt;<br>
@@ -404,7 +396,7 @@
         &lt;/div&gt;
       </div>
       
-      <h3 class="component-heading">Positioning</h3>
+      <h3 class="text-secondary-dark">Positioning</h3>
       <div class="code-block">
         &lt;div class="relative"&gt;Relative Position&lt;/div&gt;<br>
         &lt;div class="absolute top-0 right-0"&gt;Absolute Position&lt;/div&gt;<br>
@@ -412,7 +404,7 @@
         &lt;div class="sticky"&gt;Sticky Position&lt;/div&gt;
       </div>
       
-      <h3 class="component-heading">Width & Height</h3>
+      <h3 class="text-secondary-dark">Width & Height</h3>
       <div class="demo-box">
         <div class="bg-primary text-inverse p-2 mb-2 w-full">Width 100%</div>
         <div class="bg-primary text-inverse p-2 mb-2 w-1/2">Width 50%</div>
@@ -432,7 +424,7 @@
     <section id="components">
       <h2 class="section-heading">Components</h2>
       
-      <h3 class="component-heading">Buttons</h3>
+      <h3 class="text-secondary-dark">Buttons</h3>
       <div class="demo-box">
         <button class="btn btn-primary mb-2 mr-2">Primary Button</button>
         <button class="btn btn-secondary mb-2 mr-2">Secondary Button</button>
@@ -442,37 +434,40 @@
         <button class="btn btn-info mb-2 mr-2">Info Button</button>
         <button class="btn btn-light mb-2 mr-2">Light Button</button>
         <button class="btn btn-dark mb-2 mr-2">Dark Button</button>
-        
+        <div class="code-block">
+          &lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;<br>
+          &lt;button class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;<br>
+          &lt;button class="btn btn-success"&gt;Success Button&lt;/button&gt;<br>
+          &lt;button class="btn btn-danger"&gt;Danger Button&lt;/button&gt;<br>
+          &lt;button class="btn btn-warning"&gt;Warning Button&lt;/button&gt;<br>
+          &lt;button class="btn btn-info"&gt;Info Button&lt;/button&gt;<br>
+          &lt;button class="btn btn-light"&gt;Light Button&lt;/button&gt;<br>
+          &lt;button class="btn btn-dark"&gt;Dark Button&lt;/button&gt;<br><br>
+          </div>
+          <div class="demo-box">
         <h4 class="mt-4 mb-2">Outline Buttons</h4>
         <button class="btn btn-outline-primary mb-2 mr-2">Outline Primary</button>
         <button class="btn btn-outline-secondary mb-2 mr-2">Outline Secondary</button>
-        
+      </div>
+      <div class="code-block">
+        &lt;button class="btn btn-outline-primary"&gt;Outline Primary&lt;/button&gt;<br>
+        &lt;button class="btn btn-outline-secondary"&gt;Outline Secondary&lt;/button&gt;<br><br>
+      </div>
+      <div class="demo-box">
         <h4 class="mt-4 mb-2">Button Sizes</h4>
         <button class="btn btn-primary btn-sm mb-2 mr-2">Small Button</button>
         <button class="btn btn-primary mb-2 mr-2">Normal Button</button>
         <button class="btn btn-primary btn-lg mb-2 mr-2">Large Button</button>
       </div>
+      
+       
       <div class="code-block">
-        &lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;<br>
-        &lt;button class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;<br>
-        &lt;button class="btn btn-success"&gt;Success Button&lt;/button&gt;<br>
-        &lt;button class="btn btn-danger"&gt;Danger Button&lt;/button&gt;<br>
-        &lt;button class="btn btn-warning"&gt;Warning Button&lt;/button&gt;<br>
-        &lt;button class="btn btn-info"&gt;Info Button&lt;/button&gt;<br>
-        &lt;button class="btn btn-light"&gt;Light Button&lt;/button&gt;<br>
-        &lt;button class="btn btn-dark"&gt;Dark Button&lt;/button&gt;<br><br>
-        
-        &lt;!-- Outline Buttons --&gt;<br>
-        &lt;button class="btn btn-outline-primary"&gt;Outline Primary&lt;/button&gt;<br>
-        &lt;button class="btn btn-outline-secondary"&gt;Outline Secondary&lt;/button&gt;<br><br>
-        
-        &lt;!-- Button Sizes --&gt;<br>
         &lt;button class="btn btn-primary btn-sm"&gt;Small Button&lt;/button&gt;<br>
         &lt;button class="btn btn-primary"&gt;Normal Button&lt;/button&gt;<br>
         &lt;button class="btn btn-primary btn-lg"&gt;Large Button&lt;/button&gt;
       </div>
       
-      <h3 class="component-heading">Cards</h3>
+      <h3 class="text-secondary-dark">Cards</h3>
       <div class="demo-box">
         <div class="card" style="max-width: 300px;">
           <div class="card-body">
@@ -481,6 +476,18 @@
             <button class="btn btn-primary">Go somewhere</button>
           </div>
         </div>
+        </div>
+        <div class="code-block">
+          &lt;div class="card"&gt;<br>
+          &nbsp;&nbsp;&lt;div class="card-body"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5 class="card-title"&gt;Card Title&lt;/h5&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn btn-primary"&gt;Go somewhere&lt;/button&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &lt;/div&gt;<br><br>
+          </div>
+
+          <div class="demo-box">
         
         <div class="card mt-4" style="max-width: 300px;">
           <div class="card-header">
@@ -495,15 +502,8 @@
           </div>
         </div>
       </div>
-      <div class="code-block">
-        &lt;div class="card"&gt;<br>
-        &nbsp;&nbsp;&lt;div class="card-body"&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5 class="card-title"&gt;Card Title&lt;/h5&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn btn-primary"&gt;Go somewhere&lt;/button&gt;<br>
-        &nbsp;&nbsp;&lt;/div&gt;<br>
-        &lt;/div&gt;<br><br>
-        
+    
+        <div class="code-block">
         &lt;div class="card"&gt;<br>
         &nbsp;&nbsp;&lt;div class="card-header"&gt;Featured&lt;/div&gt;<br>
         &nbsp;&nbsp;&lt;div class="card-body"&gt;<br>
@@ -514,7 +514,7 @@
         &lt;/div&gt;
       </div>
       
-      <h3 class="component-heading">Alerts</h3>
+      <h3 class="text-secondary-dark">Alerts</h3>
       <div class="demo-box">
         <div class="alert alert-info mb-2">
           This is an info alert — check it out!
@@ -533,4 +533,3 @@
    </main>
    </body>
    </html>
-   

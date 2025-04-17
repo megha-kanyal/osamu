@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components - CSS Framework Documentation</title>
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="bg-primary-dark">
+        <div class="container">
+          <div class="flex items-center justify-between" style="height: 64px;">
+            <div class="flex items-center">
+              <h1 class="text-inverse">CSS Framework</h1>
+            </div>
+            <nav>
+              <ul class="nav flex">
+                <li><a href="index.html" class="nav-link text-inverse" style="color: white;">Home</a></li>
+                <li><a href="components.html" class="nav-link text-inverse" style="color:white;">Components</a></li>
+                <li><a href="utilities.html" class="nav-link text-inverse" style="color:white">Utilities</a></li>
+                <li><a href="typography.html" class="nav-link text-inverse" style="color:white">Typography</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+ 
+
+  <div class="container" style="padding-top: var(--sp-8); padding-bottom: var(--sp-16);">
+    <div class="flex">
+      <div style="width: 220px; flex-shrink: 0;">
+        <div class="sticky" style="top: var(--sp-4);">
+          <h4 class="font-semibold">Components</h4>
+          <ul class="nav flex-col">
+            <li><a href="#buttons" class="nav-link">Buttons</a></li>
+            <li><a href="#cards" class="nav-link">Cards</a></li>
+            <li><a href="#alerts" class="nav-link">Alerts</a></li>
+            <li><a href="#forms" class="nav-link">Form Elements</a></li>
+            <li><a href="#tables" class="nav-link">Tables</a></li>
+            <li><a href="#navigation" class="nav-link">Navigation</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="flex: 1; padding-left: var(--sp-8);">
+        <h1 class="font-bold">Components</h1>
+        <p class="text-secondary" style="margin-bottom: var(--sp-8);">
+          Pre-styled components to help you quickly build your user interface.
+        </p>
+        
+        <section id="buttons" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Buttons</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Use button components to trigger actions and events.
+          </p>
+          
+          <div class="card" style="margin-bottom: var(--sp-6);">
+            <div class="card-header">Default Buttons</div>
+            <div class="card-body">
+              <button class="btn btn-primary" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Primary</button>
+              <button class="btn btn-secondary" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Secondary</button>
+              <button class="btn btn-success" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Success</button>
+              <button class="btn btn-danger" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Danger</button>
+              <button class="btn btn-warning" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Warning</button>
+              <button class="btn btn-info" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Info</button>
+              <button class="btn btn-light" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Light</button>
+              <button class="btn btn-dark" style="margin-bottom: var(--sp-2);">Dark</button>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button class="btn btn-dark"&gt;Dark&lt;/button&gt;</pre>
+            </div>
+          </div>
+          
+          <div class="card" style="margin-bottom: var(--sp-6);">
+            <div class="card-header">Outline Buttons</div>
+            <div class="card-body">
+              <button class="btn btn-outline-primary" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Primary</button>
+              <button class="btn btn-outline-secondary" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Secondary</button>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;button class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;</pre>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">Button Sizes</div>
+            <div class="card-body">
+              <button class="btn btn-primary btn-sm" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Small</button>
+              <button class="btn btn-primary" style="margin-right: var(--sp-2); margin-bottom: var(--sp-2);">Default</button>
+              <button class="btn btn-primary btn-lg" style="margin-bottom: var(--sp-2);">Large</button>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;</pre>
+            </div>
+          </div>
+        </section>
+        
+        <section id="cards" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Cards</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Cards provide a flexible container for displaying content.
+          </p>
+          
+          <div class="flex flex-wrap" style="margin: 0 -10px;">
+            <div style="flex: 1 1 300px; padding: 10px;">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Basic Card</h5>
+                  <p>This is a basic card with only a body.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div style="flex: 1 1 300px; padding: 10px;">
+              <div class="card">
+                <div class="card-header">Card Header</div>
+                <div class="card-body">
+                  <h5 class="card-title">Card with header</h5>
+                  <p>This card has a header section.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div style="flex: 1 1 300px; padding: 10px;">
+              <div class="card">
+                <div class="card-header">Complete Card</div>
+                <div class="card-body">
+                  <h5 class="card-title">Card Title</h5>
+                  <h6 class="card-subtitle">Card Subtitle</h6>
+                  <p class="card-text">Some quick example text for the card.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer">Card Footer</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" style="margin-top: var(--sp-6);">
+            <div class="card-header">Card Usage</div>
+            <div class="card-body">
+              <pre class="text-inverse" style="background: var(--clr-pd ); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;Card Header&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Card Title&lt;/h5&gt;
+    &lt;h6 class="card-subtitle"&gt;Card Subtitle&lt;/h6&gt;
+    &lt;p class="card-text"&gt;Some quick example text for the card.&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;Card Footer&lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+          </div>
+        </section>
+        
+        <section id="alerts" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Alerts</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Provide contextual feedback messages for typical user actions.
+          </p>
+          
+          <div class="alert alert-info" style="margin-bottom: var(--sp-4);">
+            This is an info alert — check it out!
+          </div>
+          
+          <div class="alert alert-success" style="margin-bottom: var(--sp-4);">
+            This is a success alert — check it out!
+          </div>
+          
+          <div class="alert alert-warning" style="margin-bottom: var(--sp-4);">
+            This is a warning alert — check it out!
+          </div>
+          
+          <div class="alert alert-danger" style="margin-bottom: var(--sp-4);">
+            This is a danger alert — check it out!
+          </div>
+          
+          <div class="card" style="margin-top: var(--sp-6);">
+            <div class="card-header">Alert Usage</div>
+            <div class="card-body">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;div class="alert alert-info"&gt;
+  This is an info alert — check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-success"&gt;
+  This is a success alert — check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning"&gt;
+  This is a warning alert — check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger"&gt;
+  This is a danger alert — check it out!
+&lt;/div&gt;</pre>
+            </div>
+          </div>
+        </section>
+        
+        <section id="forms" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Form Elements</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Style form controls and inputs consistently.
+          </p>
+          
+          <div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" placeholder="name@example.com">
+                <small class="form-text">We'll never share your email with anyone else.</small>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="Password">
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;div class="form-group"&gt;
+  &lt;label class="form-label"&gt;Email address&lt;/label&gt;
+  &lt;input type="email" class="form-control" placeholder="name@example.com"&gt;
+  &lt;small class="form-text"&gt;We'll never share your email with anyone else.&lt;/small&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;label class="form-label"&gt;Password&lt;/label&gt;
+  &lt;input type="password" class="form-control" placeholder="Password"&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;label class="form-label"&gt;Example textarea&lt;/label&gt;
+  &lt;textarea class="form-control" rows="3"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;</pre>
+            </div>
+          </div>
+        </section>
+        
+        <section id="tables" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Tables</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Style tables for displaying tabular data.
+          </p>
+          
+          <div class="card">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;table class="table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+            </div>
+          </div>
+          
+          <div class="card" style="margin-top: var(--sp-6);">
+            <div class="card-header">Striped Table</div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;table class="table table-striped"&gt;
+  ...
+&lt;/table&gt;</pre>
+            </div>
+          </div>
+        </section>
+        
+        <section id="navigation" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Navigation</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Navigation components for building site menus and tabs.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Basic Nav</div>
+            <div class="card-body">
+              <ul class="nav">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">Features</a></li>
+                <li><a href="#" class="nav-link">Pricing</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;ul class="nav"&gt;
+  &lt;li&gt;&lt;a href="#" class="nav-link active"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="nav-link"&gt;Features&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="nav-link"&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+          </div
