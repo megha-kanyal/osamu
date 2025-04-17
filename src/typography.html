@@ -5,460 +5,522 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Typography - Design System Documentation</title>
   <link rel="stylesheet" href="variables.css">
-  <link rel="stylesheet" href="paste-2.txt">
-  <style>
-    .demo-text {
-      margin-bottom: var(--sp-4);
-      padding: var(--sp-4);
-      border: var(--bw-thin) solid var(--clr-bdr);
-      border-radius: var(--br-md);
-      background-color: var(--clr-surf);
-    }
-    
-    .code {
-      font-family: var(--ff-mono);
-      font-size: var(--fs-sm);
-      padding: var(--sp-1) var(--sp-2);
-      background-color: var(--clr-surf-s);
-      border-radius: var(--br-sm);
-    }
-    
-    .section {
-      margin-bottom: var(--sp-12);
-    }
-    
-    table {
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="container">
-    <header class="border-b" style="padding: var(--sp-6) 0;">
-      <h1>Design System</h1>
-      <p class="text-muted">A comprehensive design system for building consistent interfaces</p>
-    </header>
-
-    <nav class="nav border-b" style="padding: var(--sp-2) 0;">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="typography.html" class="nav-link active">Typography</a>
-      <a href="utilities.html" class="nav-link">Utilities</a>
-      <a href="components.html" class="nav-link">Components</a>
-    </nav>
-
-    <div style="padding: var(--sp-8) 0;">
-      <section class="section">
-        <h2>Typography</h2>
-        <p class="text-muted">Typography forms the foundation of our design system, providing consistent text styling across interfaces.</p>
-      </section>
-
-      <section class="section">
-        <h3>Font Families</h3>
-        <p>We use a system font stack as our base font, along with a monospace option for code.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.font-sans</code></td>
-              <td><code class="code">var(--ff-base)</code></td>
-              <td class="font-sans">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.font-mono</code></td>
-              <td><code class="code">var(--ff-mono)</code></td>
-              <td class="font-mono">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.font-new</code></td>
-              <td><code class="code">var(--ff-new)</code></td>
-              <td class="font-new">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h3>Font Sizes</h3>
-        <p>Our font size scale provides consistent text sizes throughout the interface.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.text-xs</code></td>
-              <td><code class="code">var(--fs-xs) = 0.75rem</code></td>
-              <td class="text-xs">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-sm</code></td>
-              <td><code class="code">var(--fs-sm) = 0.875rem</code></td>
-              <td class="text-sm">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-base</code></td>
-              <td><code class="code">var(--fs-md) = 1rem</code></td>
-              <td class="text-base">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-lg</code></td>
-              <td><code class="code">var(--fs-lg) = 1.125rem</code></td>
-              <td class="text-lg">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-xl</code></td>
-              <td><code class="code">var(--fs-xl) = 1.25rem</code></td>
-              <td class="text-xl">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-2xl</code></td>
-              <td><code class="code">var(--fs-2xl) = 1.5rem</code></td>
-              <td class="text-2xl">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h3>Headings</h3>
-        <p>Our heading styles provide clear visual hierarchy for page content.</p>
-        
-        <div class="demo-text">
-          <h1>Heading 1 (2.5rem)</h1>
-          <h2>Heading 2 (2rem)</h2>
-          <h3>Heading 3 (1.75rem)</h3>
-          <h4>Heading 4 (1.5rem)</h4>
-          <h5>Heading 5 (1.25rem)</h5>
-          <h6>Heading 6 (1.125rem)</h6>
+  <header class="bg-primary-dark">
+    <div class="container">
+      <div class="flex items-center justify-between" style="height: 64px;">
+        <div class="flex items-center">
+          <h1 class="text-inverse">Design System</h1>
         </div>
-        
-        <p>You can also use heading classes on other elements:</p>
-        <div class="demo-text">
-          <p class="h1">This is a paragraph with .h1 class</p>
-          <div class="h2">This is a div with .h2 class</div>
-          <span class="h3">This is a span with .h3 class</span>
-        </div>
-      </section>
-
-      <section class="section">
-        <h3>Font Weight</h3>
-        <p>Control the font weight of text with these utility classes.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.font-light</code></td>
-              <td><code class="code">var(--fw-light) = 300</code></td>
-              <td class="font-light">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.font-normal</code></td>
-              <td><code class="code">var(--fw-norm) = 400</code></td>
-              <td class="font-normal">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.font-medium</code></td>
-              <td><code class="code">var(--fw-med) = 500</code></td>
-              <td class="font-medium">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.font-semibold</code></td>
-              <td><code class="code">var(--fw-semi) = 600</code></td>
-              <td class="font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.font-bold</code></td>
-              <td><code class="code">var(--fw-bold) = 700</code></td>
-              <td class="font-bold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.font-extrabold</code></td>
-              <td><code class="code">var(--fw-xbold) = 800</code></td>
-              <td class="font-extrabold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h3>Line Height</h3>
-        <p>Control the line height of text with these utility classes.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.leading-none</code></td>
-              <td><code class="code">var(--lh-none) = 1</code></td>
-              <td><p class="leading-none" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
-            </tr>
-            <tr>
-              <td><code class="code">.leading-tight</code></td>
-              <td><code class="code">var(--lh-tight) = 1.25</code></td>
-              <td><p class="leading-tight" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
-            </tr>
-            <tr>
-              <td><code class="code">.leading-snug</code></td>
-              <td><code class="code">var(--lh-snug) = 1.375</code></td>
-              <td><p class="leading-snug" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
-            </tr>
-            <tr>
-              <td><code class="code">.leading-normal</code></td>
-              <td><code class="code">var(--lh-norm) = 1.5</code></td>
-              <td><p class="leading-normal" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
-            </tr>
-            <tr>
-              <td><code class="code">.leading-relaxed</code></td>
-              <td><code class="code">var(--lh-relax) = 1.625</code></td>
-              <td><p class="leading-relaxed" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
-            </tr>
-            <tr>
-              <td><code class="code">.leading-loose</code></td>
-              <td><code class="code">var(--lh-loose) = 2</code></td>
-              <td><p class="leading-loose" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h3>Letter Spacing</h3>
-        <p>Control the letter spacing of text with these utility classes.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.tracking-tighter</code></td>
-              <td><code class="code">var(--ls-tighter) = -0.05em</code></td>
-              <td class="tracking-tighter">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.tracking-tight</code></td>
-              <td><code class="code">var(--ls-tight) = -0.025em</code></td>
-              <td class="tracking-tight">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.tracking-normal</code></td>
-              <td><code class="code">var(--ls-norm) = 0em</code></td>
-              <td class="tracking-normal">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.tracking-wide</code></td>
-              <td><code class="code">var(--ls-wide) = 0.025em</code></td>
-              <td class="tracking-wide">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.tracking-wider</code></td>
-              <td><code class="code">var(--ls-wider) = 0.05em</code></td>
-              <td class="tracking-wider">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.tracking-widest</code></td>
-              <td><code class="code">var(--ls-widest) = 0.1em</code></td>
-              <td class="tracking-widest">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h3>Text Alignment</h3>
-        <p>Control the text alignment with these utility classes.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.text-left</code></td>
-              <td><code class="code">var(--txt-align-l)</code></td>
-              <td class="text-left">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-center</code></td>
-              <td><code class="code">var(--txt-align-c)</code></td>
-              <td class="text-center">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-right</code></td>
-              <td><code class="code">var(--txt-align-r)</code></td>
-              <td class="text-right">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-justify</code></td>
-              <td><code class="code">var(--txt-align-j)</code></td>
-              <td class="text-justify">The quick brown fox jumps over the lazy dog. This is a longer sentence to demonstrate text justification properly with adequate content.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h3>Text Transform</h3>
-        <p>Transform text case with these utility classes.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.uppercase</code></td>
-              <td><code class="code">var(--txt-upper)</code></td>
-              <td class="uppercase">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.lowercase</code></td>
-              <td><code class="code">var(--txt-lower)</code></td>
-              <td class="lowercase">The Quick Brown Fox Jumps Over The Lazy Dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.capitalize</code></td>
-              <td><code class="code">var(--txt-cap)</code></td>
-              <td class="capitalize">the quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.normal-case</code></td>
-              <td><code class="code">var(--txt-norm)</code></td>
-              <td class="normal-case">The Quick Brown Fox Jumps Over The Lazy Dog</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h3>Text Decoration</h3>
-        <p>Add decoration to text with these utility classes.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.underline</code></td>
-              <td><code class="code">var(--txt-under)</code></td>
-              <td class="underline">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.line-through</code></td>
-              <td><code class="code">var(--txt-strike)</code></td>
-              <td class="line-through">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.no-underline</code></td>
-              <td><code class="code">var(--txt-none)</code></td>
-              <td class="no-underline" style="text-decoration: underline;">The quick brown fox jumps over the lazy dog (no-underline applied)</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="section">
-        <h3>Text Colors</h3>
-        <p>Apply semantic text colors with these utility classes.</p>
-        
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="code">.text-default</code></td>
-              <td class="text-default font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-muted</code></td>
-              <td class="text-muted font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-subtle</code></td>
-              <td class="text-subtle font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-disabled</code></td>
-              <td class="text-disabled font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-primary</code></td>
-              <td class="text-primary font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-secondary</code></td>
-              <td class="text-secondary font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-success</code></td>
-              <td class="text-success font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-warning</code></td>
-              <td class="text-warning font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-danger</code></td>
-              <td class="text-danger font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-            <tr>
-              <td><code class="code">.text-info</code></td>
-              <td class="text-info font-semibold">The quick brown fox jumps over the lazy dog</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        <nav>
+          <ul class="nav flex">
+            <li><a href="index.html" class="nav-link text-inverse" style="color: white;">Home</a></li>
+            <li><a href="components.html" class="nav-link text-inverse" style="color: white;">Components</a></li>
+            <li><a href="utilities.html" class="nav-link text-inverse" style="color: white;">Utilities</a></li>
+            <li><a href="typography.html" class="nav-link text-inverse active" style="color: white;">Typography</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
+  </header>
 
-    <footer class="border-t" style="padding: var(--sp-6) 0; margin-top: var(--sp-8);">
-      <p class="text-muted">&copy; 2025 Design System. All rights reserved.</p>
-    </footer>
-  </div>
-</body>
-</html>
+  <div class="container" style="padding-top: var(--sp-8); padding-bottom: var(--sp-16);">
+    <div class="flex">
+      <div style="width: 220px; flex-shrink: 0;">
+        <div class="sticky" style="top: var(--sp-4);">
+          <h4 class="font-semibold">Typography</h4>
+          <ul class="nav flex-col">
+            <li><a href="#font-families" class="nav-link">Font Families</a></li>
+            <li><a href="#font-sizes" class="nav-link">Font Sizes</a></li>
+            <li><a href="#headings" class="nav-link">Headings</a></li>
+            <li><a href="#font-weight" class="nav-link">Font Weight</a></li>
+            <li><a href="#line-height" class="nav-link">Line Height</a></li>
+            <li><a href="#letter-spacing" class="nav-link">Letter Spacing</a></li>
+            <li><a href="#text-alignment" class="nav-link">Text Alignment</a></li>
+            <li><a href="#text-transform" class="nav-link">Text Transform</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="flex: 1; padding-left: var(--sp-8);">
+        <h1 class="font-bold">Typography</h1>
+        <p class="text-secondary" style="margin-bottom: var(--sp-8);">
+          Typography forms the foundation of our design system, providing consistent text styling across interfaces.
+        </p>
+        
+        <section id="font-families" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Font Families</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            We use a system font stack as our base font, along with a monospace option for code.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Font Families</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Value</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code class="code">.font-sans</code></td>
+                    <td><code class="code">var(--ff-base)</code></td>
+                    <td class="font-sans">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.font-mono</code></td>
+                    <td><code class="code">var(--ff-mono)</code></td>
+                    <td class="font-mono">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.font-new</code></td>
+                    <td><code class="code">var(--ff-new)</code></td>
+                    <td class="font-new">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;p class="font-sans"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="font-mono"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="font-new"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;</pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="font-sizes" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Font Sizes</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Our font size scale provides consistent text sizes throughout the interface.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Font Sizes</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Value</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code class="code">.text-xs</code></td>
+                    <td><code class="code">var(--fs-xs) = 0.75rem</code></td>
+                    <td class="text-xs">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.text-sm</code></td>
+                    <td><code class="code">var(--fs-sm) = 0.875rem</code></td>
+                    <td class="text-sm">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.text-base</code></td>
+                    <td><code class="code">var(--fs-md) = 1rem</code></td>
+                    <td class="text-base">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.text-lg</code></td>
+                    <td><code class="code">var(--fs-lg) = 1.125rem</code></td>
+                    <td class="text-lg">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.text-xl</code></td>
+                    <td><code class="code">var(--fs-xl) = 1.25rem</code></td>
+                    <td class="text-xl">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.text-2xl</code></td>
+                    <td><code class="code">var(--fs-2xl) = 1.5rem</code></td>
+                    <td class="text-2xl">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;p class="text-xs"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-sm"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-base"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-lg"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-xl"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-2xl"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;</pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="headings" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Headings</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Our heading styles provide clear visual hierarchy for page content.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Heading Elements</div>
+            <div class="card-body">
+              <div class="demo-text">
+                <h1>Heading 1 (2.5rem)</h1>
+                <h2>Heading 2 (2rem)</h2>
+                <h3>Heading 3 (1.75rem)</h3>
+                <h4>Heading 4 (1.5rem)</h4>
+                <h5>Heading 5 (1.25rem)</h5>
+                <h6>Heading 6 (1.125rem)</h6>
+              </div>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;h1&gt;Heading 1 (2.5rem)&lt;/h1&gt;
+&lt;h2&gt;Heading 2 (2rem)&lt;/h2&gt;
+&lt;h3&gt;Heading 3 (1.75rem)&lt;/h3&gt;
+&lt;h4&gt;Heading 4 (1.5rem)&lt;/h4&gt;
+&lt;h5&gt;Heading 5 (1.25rem)&lt;/h5&gt;
+&lt;h6&gt;Heading 6 (1.125rem)&lt;/h6&gt;</pre>
+            </div>
+          </div>
+          
+          <div class="card" style="margin-top: var(--sp-6);">
+            <div class="card-header">Heading Classes</div>
+            <div class="card-body">
+              <div class="demo-text">
+                <p class="h1">This is a paragraph with .h1 class</p>
+                <div class="h2">This is a div with .h2 class</div>
+                <span class="h3">This is a span with .h3 class</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;p class="h1"&gt;This is a paragraph with .h1 class&lt;/p&gt;
+&lt;div class="h2"&gt;This is a div with .h2 class&lt;/div&gt;
+&lt;span class="h3"&gt;This is a span with .h3 class&lt;/span&gt;</pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="font-weight" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Font Weight</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Control the font weight of text with these utility classes.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Font Weight</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Value</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code class="code">.font-light</code></td>
+                    <td><code class="code">var(--fw-light) = 300</code></td>
+                    <td class="font-light">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.font-normal</code></td>
+                    <td><code class="code">var(--fw-norm) = 400</code></td>
+                    <td class="font-normal">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.font-medium</code></td>
+                    <td><code class="code">var(--fw-med) = 500</code></td>
+                    <td class="font-medium">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.font-semibold</code></td>
+                    <td><code class="code">var(--fw-semi) = 600</code></td>
+                    <td class="font-semibold">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.font-bold</code></td>
+                    <td><code class="code">var(--fw-bold) = 700</code></td>
+                    <td class="font-bold">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.font-extrabold</code></td>
+                    <td><code class="code">var(--fw-xbold) = 800</code></td>
+                    <td class="font-extrabold">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;p class="font-light"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="font-normal"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="font-medium"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="font-semibold"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="font-bold"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="font-extrabold"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;</pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="line-height" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Line Height</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Control the line height of text with these utility classes.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Line Height</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Value</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code class="code">.leading-none</code></td>
+                    <td><code class="code">var(--lh-none) = 1</code></td>
+                    <td><p class="leading-none" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.leading-tight</code></td>
+                    <td><code class="code">var(--lh-tight) = 1.25</code></td>
+                    <td><p class="leading-tight" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.leading-snug</code></td>
+                    <td><code class="code">var(--lh-snug) = 1.375</code></td>
+                    <td><p class="leading-snug" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.leading-normal</code></td>
+                    <td><code class="code">var(--lh-norm) = 1.5</code></td>
+                    <td><p class="leading-normal" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.leading-relaxed</code></td>
+                    <td><code class="code">var(--lh-relax) = 1.625</code></td>
+                    <td><p class="leading-relaxed" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.leading-loose</code></td>
+                    <td><code class="code">var(--lh-loose) = 2</code></td>
+                    <td><p class="leading-loose" style="max-width: 400px;">The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate line height differences between the various utility classes.</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;p class="leading-none"&gt;The quick brown fox jumps over the lazy dog...&lt;/p&gt;
+&lt;p class="leading-tight"&gt;The quick brown fox jumps over the lazy dog...&lt;/p&gt;
+&lt;p class="leading-snug"&gt;The quick brown fox jumps over the lazy dog...&lt;/p&gt;
+&lt;p class="leading-normal"&gt;The quick brown fox jumps over the lazy dog...&lt;/p&gt;
+&lt;p class="leading-relaxed"&gt;The quick brown fox jumps over the lazy dog...&lt;/p&gt;
+&lt;p class="leading-loose"&gt;The quick brown fox jumps over the lazy dog...&lt;/p&gt;</pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="letter-spacing" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Letter Spacing</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Control the letter spacing of text with these utility classes.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Letter Spacing</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Value</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code class="code">.tracking-tighter</code></td>
+                    <td><code class="code">var(--ls-tighter) = -0.05em</code></td>
+                    <td class="tracking-tighter">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.tracking-tight</code></td>
+                    <td><code class="code">var(--ls-tight) = -0.025em</code></td>
+                    <td class="tracking-tight">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.tracking-normal</code></td>
+                    <td><code class="code">var(--ls-norm) = 0em</code></td>
+                    <td class="tracking-normal">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.tracking-wide</code></td>
+                    <td><code class="code">var(--ls-wide) = 0.025em</code></td>
+                    <td class="tracking-wide">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.tracking-wider</code></td>
+                    <td><code class="code">var(--ls-wider) = 0.05em</code></td>
+                    <td class="tracking-wider">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.tracking-widest</code></td>
+                    <td><code class="code">var(--ls-widest) = 0.1em</code></td>
+                    <td class="tracking-widest">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;p class="tracking-tighter"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="tracking-tight"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="tracking-normal"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="tracking-wide"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="tracking-wider"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="tracking-widest"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;</pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="text-alignment" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Text Alignment</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Control the text alignment with these utility classes.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Text Alignment</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Value</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code class="code">.text-left</code></td>
+                    <td><code class="code">var(--txt-align-l)</code></td>
+                    <td class="text-left">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.text-center</code></td>
+                    <td><code class="code">var(--txt-align-c)</code></td>
+                    <td class="text-center">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.text-right</code></td>
+                    <td><code class="code">var(--txt-align-r)</code></td>
+                    <td class="text-right">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.text-justify</code></td>
+                    <td><code class="code">var(--txt-align-j)</code></td>
+                    <td class="text-justify">The quick brown fox jumps over the lazy dog. This is a longer sentence to demonstrate text justification properly with adequate content.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;p class="text-left"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-center"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-right"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="text-justify"&gt;The quick brown fox jumps over the lazy dog...&lt;/p&gt;</pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="text-transform" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Text Transform</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Transform text case with these utility classes.
+          </p>
+          
+          <div class="card">
+            <div class="card-header">Text Transform</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Value</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code class="code">.uppercase</code></td>
+                    <td><code class="code">var(--txt-upper)</code></td>
+                    <td class="uppercase">The quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.lowercase</code></td>
+                    <td><code class="code">var(--txt-lower)</code></td>
+                    <td class="lowercase">The Quick Brown Fox Jumps Over The Lazy Dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.capitalize</code></td>
+                    <td><code class="code">var(--txt-cap)</code></td>
+                    <td class="capitalize">the quick brown fox jumps over the lazy dog</td>
+                  </tr>
+                  <tr>
+                    <td><code class="code">.normal-case</code></td>
+                    <td><code class="code">var(--txt-norm)</code></td>
+                    <td class="normal-case">The Quick Brown Fox Jumps Over The Lazy Dog</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;p class="uppercase"&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="lowercase"&gt;The Quick Brown Fox Jumps Over The Lazy Dog&lt;/p&gt;
+&lt;p class="capitalize"&gt;the quick brown fox jumps over the lazy dog&lt;/p&gt;
+&lt;p class="normal-case"&gt;The Quick Brown Fox Jumps Over The Lazy Dog&lt;/p&gt;</pre>
+            </div>
+          </div>
+        </section>
+        </div>
+        </div>
+        </div>
+        <footer class="bg-primary-dark text-inverse" style="padding: var(--sp-10) 0;">
+            <div class="container">
+              <div class="flex justify-between">
+                <div>
+                  <h2 class="font-bold text-inverse">CSS Framework</h2>
+                  <p>A utility-first CSS framework for rapid UI development</p>
+                </div>
+                <div>
+                  <h4 class="text-inverse font-medium">Resources</h4>
+                  <ul class="nav flex-col">
+                    <li><a href="components.html" class="nav-link text-inverse">Components</a></li>
+                    <li><a href="utilities.html" class="nav-link text-inverse">Utilities</a></li>
+                    <li><a href="typography.html" class="nav-link text-inverse">Typography</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center" style="margin-top: var(--sp-8); padding-top: var(--sp-8); border-top: 1px solid rgba(255,255,255,0.1);">
+                <p class="text-sm">CSS Framework © 2025</p>
+              </div>
+            </div>
+          </footer>
+          </div>
+          
+          </body>
+          </html>
+          

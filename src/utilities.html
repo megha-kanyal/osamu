@@ -3,205 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utilities - Design System Documentation</title>
+  <title>Utilities - CSS Framework Documentation</title>
   <link rel="stylesheet" href="variables.css">
-  <link rel="stylesheet" href="paste-2.txt">
-  <style>
-    .demo-box {
-      padding: var(--sp-4);
-      margin-bottom: var(--sp-4);
-      border: var(--bw-thin) solid var(--clr-bdr);
-      border-radius: var(--br-md);
-      background-color: var(--clr-surf);
-    }
-    
-    .color-swatch {
-      width: 100%;
-      height: 50px;
-      border-radius: var(--br-md);
-      margin-bottom: var(--sp-2);
-    }
-    
-    .code {
-      font-family: var(--ff-mono);
-      font-size: var(--fs-sm);
-      padding: var(--sp-1) var(--sp-2);
-      background-color: var(--clr-surf-s);
-      border-radius: var(--br-sm);
-    }
-    
-    .section {
-      margin-bottom: var(--sp-12);
-    }
-    
-    .subsection {
-      margin-bottom: var(--sp-8);
-    }
-    
-    .spacing-box {
-      background-color: var(--clr-p);
-      color: white;
-      border-radius: var(--br-sm);
-    }
-    
-    .shadow-example {
-      width: 100px;
-      height: 100px;
-      background-color: white;
-      margin: var(--sp-3);
-      display: inline-block;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="container">
-    <header class="border-b" style="padding: var(--sp-6) 0;">
-      <h1>Design System</h1>
-      <p class="text-muted">A comprehensive design system for building consistent interfaces</p>
-    </header>
-
-    <nav class="nav border-b" style="padding: var(--sp-2) 0;">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="typography.html" class="nav-link">Typography</a>
-      <a href="utilities.html" class="nav-link active">Utilities</a>
-      <a href="components.html" class="nav-link">Components</a>
-    </nav>
-
-    <div style="padding: var(--sp-8) 0;">
-      <section class="section">
-        <h2>Utilities</h2>
-        <p class="text-muted">Utility classes provide single-purpose styling to elements, enabling rapid UI development without writing custom CSS.</p>
-      </section>
-
-      <section class="section" id="colors">
-        <h3>Colors</h3>
-        <p>Our color system includes primary, secondary, and semantic colors for backgrounds, text, and borders.</p>
-        
-        <div class="subsection">
-          <h4>Background Colors</h4>
-          <div class="flex flex-wrap" style="margin: 0 -8px;">
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-primary"></div>
-                <code class="code">.bg-primary</code>
-                <p class="text-xs">Primary background</p>
-              </div>
+    <header class="bg-primary-dark">
+        <div class="container">
+          <div class="flex items-center justify-between" style="height: 64px;">
+            <div class="flex items-center">
+              <h1 class="text-inverse">CSS Framework</h1>
             </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-primary-light"></div>
-                <code class="code">.bg-primary-light</code>
-                <p class="text-xs">Primary light background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-primary-dark"></div>
-                <code class="code">.bg-primary-dark</code>
-                <p class="text-xs">Primary dark background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-secondary"></div>
-                <code class="code">.bg-secondary</code>
-                <p class="text-xs">Secondary background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-success"></div>
-                <code class="code">.bg-success</code>
-                <p class="text-xs">Success background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-warning"></div>
-                <code class="code">.bg-warning</code>
-                <p class="text-xs">Warning background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-danger"></div>
-                <code class="code">.bg-danger</code>
-                <p class="text-xs">Danger background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-info"></div>
-                <code class="code">.bg-info</code>
-                <p class="text-xs">Info background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-white"></div>
-                <code class="code">.bg-white</code>
-                <p class="text-xs">White background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-surface"></div>
-                <code class="code">.bg-surface</code>
-                <p class="text-xs">Surface background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-surface-raised"></div>
-                <code class="code">.bg-surface-raised</code>
-                <p class="text-xs">Surface raised background</p>
-              </div>
-            </div>
-            <div style="padding: 8px; width: 33.333%;">
-              <div class="demo-box">
-                <div class="color-swatch bg-surface-sunken"></div>
-                <code class="code">.bg-surface-sunken</code>
-                <p class="text-xs">Surface sunken background</p>
-              </div>
-            </div>
+            <nav>
+              <ul class="nav flex">
+                <li><a href="index.html" class="nav-link text-inverse" style="color: white;">Home</a></li>
+                <li><a href="components.html" class="nav-link text-inverse" style="color:white;">Components</a></li>
+                <li><a href="utilities.html" class="nav-link text-inverse" style="color:white">Utilities</a></li>
+                <li><a href="typography.html" class="nav-link text-inverse" style="color:white">Typography</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
+      </header>
+ 
+
+  <div class="container" style="padding-top: var(--sp-8); padding-bottom: var(--sp-16);">
+    <div class="flex">
+      <div style="width: 220px; flex-shrink: 0;">
+        <div class="sticky" style="top: var(--sp-4);">
+          <h4 class="font-semibold">Utilities</h4>
+          <ul class="nav flex-col">
+            <li><a href="#colors" class="nav-link">Colors</a></li>
+            <li><a href="#borders" class="nav-link">Borders</a></li>
+            <li><a href="#shadows" class="nav-link">Shadows</a></li>
+            <li><a href="#layout" class="nav-link">Layout</a></li>
+            <li><a href="#flex" class="nav-link">Flex</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="flex: 1; padding-left: var(--sp-8);">
+        <h1 class="font-bold">Utilities</h1>
+        <p class="text-secondary" style="margin-bottom: var(--sp-8);">
+          Utility classes to help you quickly style elements without writing custom CSS.
+        </p>
         
-        <div class="subsection">
-          <h4>Border Colors</h4>
-          <table class="table border">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Description</th>
-                <th>Example</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code class="code">.border-primary</code></td>
-                <td>Primary border color</td>
-                <td><div style="width: 100px; height: 30px;" class="border-2 border-primary"></div></td>
-              </tr>
-              <tr>
-                <td><code class="code">.border-secondary</code></td>
-                <td>Secondary border color</td>
-                <td><div style="width: 100px; height: 30px;" class="border-2 border-secondary"></div></td>
-              </tr>
-              <tr>
-                <td><code class="code">.border-success</code></td>
-                <td>Success border color</td>
-                <td><div style="width: 100px; height: 30px;" class="border-2 border-success"></div></td>
-              </tr>
-              <tr>
-                <td><code class="code">.border-warning</code></td>
-                <td>Warning border color</td>
-                <td><div style="width: 100px; height: 30px;" class="border-2 border-warning"></div></td>
-              </tr>
-              <tr>
-                <td><code class="code">.border-danger</code></td>
-                <td>Danger border color</td>
-                <td><div style="width: 100px; height: 30px;" class="border-2 border-danger"></div></td>
-              </tr>
-              <tr>
-                <td><code class="code">.border
+        
+        
+        <section id="colors" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Color Utilities</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Classes for controlling background and border colors.
+          </p>
+          
+          <div class="card" style="margin-bottom: var(--sp-6);">
+            <div class="card-header">Background Colors</div>
+            <div class="card-body">
+              <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: var(--sp-4);">
+                <div class="bg-primary" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; color: white; border-radius: var(--br-md);">bg-primary</div>
+                <div class="bg-primary-light" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; border-radius: var(--br-md);">bg-primary-light</div>
+                <div class="bg-primary-dark" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; color: white; border-radius: var(--br-md);">bg-primary-dark</div>
+                <div class="bg-secondary" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; color: white; border-radius: var(--br-md);">bg-secondary</div>
+                <div class="bg-success" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; color: white; border-radius: var(--br-md);">bg-success</div>
+                <div class="bg-warning" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; border-radius: var(--br-md);">bg-warning</div>
+                <div class="bg-danger" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; color: white; border-radius: var(--br-md);">bg-danger</div>
+                <div class="bg-info" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; border-radius: var(--br-md);">bg-info</div>
+                <div class="bg-white" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; border-radius: var(--br-md);">bg-white</div>
+                <div class="bg-surface" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border: 1px solid #ddd; border-radius: var(--br-md);">bg-surface</div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;div class="bg-primary"&gt;bg-primary&lt;/div&gt;
+&lt;div class="bg-primary-light"&gt;bg-primary-light&lt;/div&gt;
+&lt;div class="bg-primary-dark"&gt;bg-primary-dark&lt;/div&gt;
+&lt;div class="bg-secondary"&gt;bg-secondary&lt;/div&gt;
+&lt;div class="bg-success"&gt;bg-success&lt;/div&gt;
+&lt;div class="bg-warning"&gt;bg-warning&lt;/div&gt;
+&lt;div class="bg-danger"&gt;bg-danger&lt;/div&gt;
+&lt;div class="bg-info"&gt;bg-info&lt;/div&gt;
+&lt;div class="bg-white"&gt;bg-white&lt;/div&gt;
+&lt;div class="bg-surface"&gt;bg-surface&lt;/div&gt;</pre>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">Border Colors</div>
+            <div class="card-body">
+              <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div class="border-primary" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px; border-style: solid; border-radius: var(--br-md);">border-primary</div>
+                <div class="border-secondary" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px; border-style: solid; border-radius: var(--br-md);">border-secondary</div>
+                <div class="border-success" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px; border-style: solid; border-radius: var(--br-md);">border-success</div>
+                <div class="border-warning" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px; border-style: solid; border-radius: var(--br-md);">border-warning</div>
+                <div class="border-danger" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px; border-style: solid; border-radius: var(--br-md);">border-danger</div>
+                <div class="border-info" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px; border-style: solid; border-radius: var(--br-md);">border-info</div>
+                <div class="border-default" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px; border-style: solid; border-radius: var(--br-md);">border-default</div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;div class="border-primary" style="border-width: 4px; border-style: solid;"&gt;border-primary&lt;/div&gt;
+&lt;div class="border-secondary" style="border-width: 4px; border-style: solid;"&gt;border-secondary&lt;/div&gt;
+&lt;div class="border-success" style="border-width: 4px; border-style: solid;"&gt;border-success&lt;/div&gt;
+&lt;div class="border-warning" style="border-width: 4px; border-style: solid;"&gt;border-warning&lt;/div&gt;
+&lt;div class="border-danger" style="border-width: 4px; border-style: solid;"&gt;border-danger&lt;/div&gt;
+&lt;div class="border-info" style="border-width: 4px; border-style: solid;"&gt;border-info&lt;/div&gt;
+&lt;div class="border-default" style="border-width: 4px; border-style: solid;"&gt;border-default&lt;/div&gt;</pre>
+            </div>
+          </div>
+        </section>
+        
+        <section id="borders" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Border Utilities</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Classes for controlling border width, style, and radius.
+          </p>
+          
+          <div class="card" style="margin-bottom: var(--sp-6);">
+            <div class="card-header">Border Width</div>
+            <div class="card-body">
+              <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: var(--sp-4);">
+                <div class="border" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">border</div>
+                <div class="border-2" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">border-2</div>
+                <div class="border-4" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">border-4</div>
+              </div>
+              
+              <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div class="border-t" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">border-t</div>
+                <div class="border-r" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">border-r</div>
+                <div class="border-b" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">border-b</div>
+                <div class="border-l" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">border-l</div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;div class="border"&gt;border&lt;/div&gt;
+&lt;div class="border-2"&gt;border-2&lt;/div&gt;
+&lt;div class="border-4"&gt;border-4&lt;/div&gt;
+
+&lt;div class="border-t"&gt;border-t&lt;/div&gt;
+&lt;div class="border-r"&gt;border-r&lt;/div&gt;
+&lt;div class="border-b"&gt;border-b&lt;/div&gt;
+&lt;div class="border-l"&gt;border-l&lt;/div&gt;</pre>
+            </div>
+          </div>
+          
+          <div class="card" style="margin-bottom: var(--sp-6);">
+            <div class="card-header">Border Style</div>
+            <div class="card-body">
+              <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div class="border border-solid" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px;">border-solid</div>
+                <div class="border border-dashed" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px;">border-dashed</div>
+                <div class="border border-dotted" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; border-width: 4px;">border-dotted</div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;div class="border border-solid"&gt;border-solid&lt;/div&gt;
+&lt;div class="border border-dashed"&gt;border-dashed&lt;/div&gt;
+&lt;div class="border border-dotted"&gt;border-dotted&lt;/div&gt;</pre>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">Border Radius</div>
+            <div class="card-body">
+              <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div class="border rounded-none" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">rounded-none</div>
+                <div class="border rounded-sm" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">rounded-sm</div>
+                <div class="border rounded" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">rounded</div>
+                <div class="border rounded-lg" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">rounded-lg</div>
+                <div class="border rounded-xl" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">rounded-xl</div>
+                <div class="border rounded-full" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; text-align: center;">rounded-full</div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <pre class="text-inverse" style="background: var(--clr-pd); padding: var(--sp-4); border-radius: var(--br-md); margin: 0; overflow-x: auto;">
+&lt;div class="border rounded-none"&gt;rounded-none&lt;/div&gt;
+&lt;div class="border rounded-sm"&gt;rounded-sm&lt;/div&gt;
+&lt;div class="border rounded"&gt;rounded&lt;/div&gt;
+&lt;div class="border rounded-lg"&gt;rounded-lg&lt;/div&gt;
+&lt;div class="border rounded-xl"&gt;rounded-xl&lt;/div&gt;
+&lt;div class="border rounded-full"&gt;rounded-full&lt;/div&gt;</pre>
+            </div>
+          </div>
+        </section>
+        
+        <section id="shadows" style="margin-bottom: var(--sp-16);">
+          <h2 class="font-semibold">Shadow Utilities</h2>
+          <p class="text-secondary" style="margin-bottom: var(--sp-4);">
+            Classes for adding shadows to elements.
+          </p>
+          
+          <div class="card">
+            <div class="card-body">
+              <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: var(--sp-4);">
+                <div class="shadow-none" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-align: center; background: white; border: 1px solid #eee;">shadow-none</div>
+                <div class="shadow-xs" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-align: center; background: white;">shadow-xs</div>
+                <div class="shadow-sm" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-align: center; background: white;">shadow-sm</div>
+                <div class="shadow" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-align: center; background: white;">shadow</div>
+                <div class="shadow-lg" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-align: center; background: white;">shadow-lg</div>
+                <div class="shadow-xl" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-align: center; background: white;">shadow-xl</div>
+                <div class="shadow-2xl" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-align: center; background: white;">shadow-2xl</div>
+                <div class="shadow-inner" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-align: center; background: white;">shadow- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     

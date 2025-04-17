@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
   <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="bg-surface">
   <header class="bg-primary-dark">
     <div class="container">
       <div class="flex items-center justify-between" style="height: 64px;">
@@ -27,33 +30,30 @@
   </header>
 
   <main>
-    <section class="bg-surface-raised" style="padding: var(--sp-20) 0;">
+    <section class="" style="padding: var(--sp-20) 0; background: rgb(63, 174, 230);">
       <div class="container">
         <div class="flex flex-col items-center text-center">
-          <h1 class="text-2xl">Your Modern CSS Framework</h1>
-          <p class="text-lg text-secondary" style="max-width: 600px; margin: var(--sp-4) auto var(--sp-8);">
+          <h1 class="text-2xl font-bold text-primary-dark">Your Modern CSS Framework</h1>
+          <p class="text-lg text-primary-dark" style="max-width: 600px; margin: var(--sp-4) auto var(--sp-8);">
             A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.
           </p>
-          <div class="flex">
-            <a href="components.html" class="btn btn-primary mr-4">Components</a>
-            <a href="utilities.html" class="btn btn-outline-primary">Utilities</a>
-          </div>
+         
         </div>
       </div>
     </section>
 
-    <section style="padding: var(--sp-16) 0;">
+    <section class="bg-white" style="padding: var(--sp-16) 0;">
       <div class="container">
         <div class="flex flex-col">
-          <h2 class="font-bold">Introduction</h2>
+          <h2 class="font-bold text-xl text-primary">Introduction</h2>
           <p class="text-secondary" style="margin-bottom: var(--sp-6);">
             This is a well-structured CSS framework designed to help you quickly build modern websites without ever leaving your HTML. 
             It provides comprehensive utility classes and component styles that follow a consistent design system.
           </p>
 
-          <div class="card" style="margin-top: var(--sp-8);">
+          <div class="card shadow-lg border-primary" style="margin-top: var(--sp-8);">
+            <div class="card-header bg-primary text-inverse">Getting Started</div>
             <div class="card-body">
-              <h3 class="card-title">Getting Started</h3>
               <p>To use this framework, just include the CSS files in your HTML:</p>
               <pre style="background: var(--clr-surf-s); padding: var(--sp-4); border-radius: var(--br-md); margin: var(--sp-4) 0; overflow-x: auto;">
 &lt;link rel="stylesheet" href="variables.css"&gt;
@@ -61,31 +61,31 @@
             </div>
           </div>
 
-          <h2 class="font-bold" style="margin-top: var(--sp-10);">Core Concepts</h2>
+          <h2 class="font-bold text-xl text-primary" style="margin-top: var(--sp-10);">Core Concepts</h2>
           
-          <div class="flex flex-wrap" style="margin: 0 -10px;">
+          <div class="flex flex-wrap" style="margin: var(--sp-4) -10px;">
             <div style="flex: 1 1 300px; padding: 10px;">
-              <div class="card h-full">
+              <div class="card h-full shadow bg-primary-light">
+                <div class="card-header bg-primary text-primary-dark">Utility-First</div>
                 <div class="card-body">
-                  <h3 class="card-title">Utility-First</h3>
-                  <p>Instead of writing custom CSS for every unique component, use utility classes to style elements directly in your markup.</p>
+                  <p class="text-primary-dark">Instead of writing custom CSS for every unique component, use utility classes to style elements directly in your markup.</p>
                 </div>
               </div>
             </div>
             
             <div style="flex: 1 1 300px; padding: 10px;">
-              <div class="card h-full">
+              <div class="card h-full shadow bg-primary-dark">
+                <div class="card-header bg-secondary text-primary-dark">Component-Based</div>
                 <div class="card-body">
-                  <h3 class="card-title">Component-Based</h3>
-                  <p>For common UI patterns, we provide pre-styled components like buttons, cards, and alerts for rapid development.</p>
+                  <p class="text-primary-dark">For common UI patterns, we provide pre-styled components like buttons, cards, and alerts for rapid development.</p>
                 </div>
               </div>
             </div>
             
             <div style="flex: 1 1 300px; padding: 10px;">
-              <div class="card h-full">
+              <div class="card h-full shadow bg-surface-raised">
+                <div class="card-header bg-primary-dark text-primary-dark">Design System</div>
                 <div class="card-body">
-                  <h3 class="card-title">Design System</h3>
                   <p>A comprehensive set of design tokens and variables ensures consistency across your project.</p>
                 </div>
               </div>
@@ -95,43 +95,46 @@
       </div>
     </section>
     
-    <section class="bg-surface" style="padding: var(--sp-16) 0;">
+    <section class="bg-primary-dark" style="padding: var(--sp-16) 0;">
       <div class="container">
-        <h2 class="font-bold text-center" style="margin-bottom: var(--sp-8);">Featured Components</h2>
+        <h2 class="font-bold text-xl text-center text-secondary-dark" style="margin-bottom: var(--sp-8);">Featured Components</h2>
         
         <div class="flex flex-wrap">
           <div style="flex: 1 1 50%; padding: var(--sp-4);">
-            <h3 class="font-semibold">Buttons</h3>
-            <div class="card">
+            <h3 class="font-semibold text-lg text-secondary">Buttons</h3>
+            <div class="card shadow-lg border-primary">
+              <div class="card-header bg-primary-light">Beautiful Buttons</div>
               <div class="card-body">
-                <button class="btn btn-primary" style="margin-right: var(--sp-2);">Primary</button>
-                <button class="btn btn-secondary" style="margin-right: var(--sp-2);">Secondary</button>
-                <button class="btn btn-success" style="margin-right: var(--sp-2);">Success</button>
-                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-primary shadow" style="margin-right: var(--sp-2);">Primary</button>
+                <button class="btn btn-secondary shadow" style="margin-right: var(--sp-2);">Secondary</button>
+                <button class="btn btn-success shadow" style="margin-right: var(--sp-2);">Success</button>
+                <button class="btn btn-danger shadow">Danger</button>
               </div>
             </div>
           </div>
           
           <div style="flex: 1 1 50%; padding: var(--sp-4);">
-            <h3 class="font-semibold">Alerts</h3>
-            <div class="card">
+            <h3 class="font-semibold text-lg text-secondary">Alerts</h3>
+            <div class="card shadow-lg border-secondary">
+              <div class="card-header bg-secondary-light">Informative Alerts</div>
               <div class="card-body">
-                <div class="alert alert-info" style="margin-bottom: var(--sp-2);">This is an info alert</div>
-                <div class="alert alert-success">This is a success alert</div>
+                <div class="alert alert-info shadow-sm" style="margin-bottom: var(--sp-2);">This is an info alert</div>
+                <div class="alert alert-success shadow-sm">This is a success alert</div>
               </div>
             </div>
           </div>
           
           <div style="flex: 1 1 50%; padding: var(--sp-4);">
-            <h3 class="font-semibold">Forms</h3>
-            <div class="card">
-              <div class="card-body">
+            <h3 class="font-semibold text-lg text-secondary">Forms</h3>
+            <div class="card shadow-lg border-primary">
+              <div class="card-header bg-primary-light">Form Elements</div>
+              <div class="card-body bg-white">
                 <div class="form-group">
-                  <label class="form-label">Email</label>
+                  <label class="form-label font-medium">Email</label>
                   <input type="email" class="form-control" placeholder="Enter email">
                 </div>
-                <div class="form-group">
-                  <label class="form-label">Password</label>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label font-medium">Password</label>
                   <input type="password" class="form-control" placeholder="Password">
                 </div>
               </div>
@@ -139,16 +142,16 @@
           </div>
           
           <div style="flex: 1 1 50%; padding: var(--sp-4);">
-            <h3 class="font-semibold">Cards</h3>
-            <div class="card">
-              <div class="card-header">
+            <h3 class="font-semibold text-lg text-secondary">Cards</h3>
+            <div class="card shadow-lg border-secondary">
+              <div class="card-header bg-secondary-light font-medium">
                 Card Header
               </div>
-              <div class="card-body">
-                <h5 class="card-title">Card Title</h5>
+              <div class="card-body bg-white">
+                <h5 class="card-title text-primary">Card Title</h5>
                 <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
-              <div class="card-footer">
+              <div class="card-footer bg-surface-raised">
                 Card Footer
               </div>
             </div>
@@ -156,25 +159,40 @@
         </div>
         
         <div class="text-center" style="margin-top: var(--sp-10);">
-          <a href="components.html" class="btn btn-primary">View All Components</a>
+          <a href="components.html" class="btn btn-primary btn-lg shadow-lg">View All Components</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary-light" style="padding: var(--sp-16) 0;">
+      <div class="container">
+        <div class="flex flex-col items-center text-center">
+          <h2 class="font-bold text-xl text-primary-dark">Start Building Your Next Project Today</h2>
+          <p class="text-secondary-dark" style="max-width: 600px; margin: var(--sp-4) auto var(--sp-8);">
+            With our CSS framework, building beautiful user interfaces has never been easier.
+            Get started now and experience the power of utility-first design.
+          </p>
+         
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-primary-dark text-inverse" style="padding: var(--sp-10) 0;">
+  <footer class="bg-primary-dark text-inverse shadow-lg" style="padding: var(--sp-10) 0;">
     <div class="container">
-      <div class="flex justify-between">
-        <div>
+      <div class="flex justify-between flex-wrap">
+        <div style="flex: 1 1 300px; margin-bottom: var(--sp-6);">
           <h2 class="font-bold text-inverse">CSS Framework</h2>
-          <p>A utility-first CSS framework for rapid UI development</p>
+          <p class="text-sm">A utility-first CSS framework for rapid UI development</p>
+          <p class="text-sm" style="margin-top: var(--sp-4);">Experience the power of modern CSS with our comprehensive toolkit.</p>
         </div>
-        <div>
+        <div style="flex: 0 0 auto;">
           <h4 class="text-inverse font-medium">Resources</h4>
           <ul class="nav flex-col">
             <li><a href="components.html" class="nav-link text-inverse">Components</a></li>
             <li><a href="utilities.html" class="nav-link text-inverse">Utilities</a></li>
             <li><a href="typography.html" class="nav-link text-inverse">Typography</a></li>
+            <li><a href="#documentation" class="nav-link text-inverse">Documentation</a></li>
           </ul>
         </div>
       </div>
