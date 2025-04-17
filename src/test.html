@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,8 @@
     <title>OSAMU CSS Framework</title>
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive_12_column_grid.css">
+    <link rel="stylesheet" href="flex.css">
 </head>
 <body>
     <header class="bg-primary text-inverse py-4">
@@ -14,6 +17,18 @@
             <p class="text-lg font-mono">A modern utility-first CSS framework with powerful components</p>
         </div>
     </header>
+     <!-- Navbar -->
+  <nav class="bg-white shadow p-4">
+    <div class="container flex justify-between items-center">
+      <a href="#" class="font-bold text-xl text-primary">OSAMU's Navbar</a>
+      <div class="flex gap-4">
+        <a href="#features" class="text-secondary hover:text-secondary-dark">Features</a>
+        <a href="#components" class="text-secondary hover:text-secondary-dark">Components</a>
+        <a href="#contact" class="text-secondary hover:text-secondary-dark">Contact</a>
+      </div>
+    </div>
+  </nav>
+   
 
     <main class="container my-8">
         <!-- Introduction -->
@@ -325,6 +340,48 @@
                 </div>
             </div>
         </section>
+
+  
+      <!-- Grid Example -->
+    <section id="grid-example" class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Responsive Grid</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-4 p-4 bg-surf rounded border text-center">.col-4</div>
+            <div class="col-4 p-4 bg-surf rounded border text-center">.col-4</div>
+            <div class="col-4 p-4 bg-surf rounded border text-center">.col-4</div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Flexbox Example -->
+      <section id="flex-example" class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Flexbox Utilities</h2>
+        <div class="container">
+          <div class="flex flex-wrap justify-between items-center gap-4 p-6 bg-surf rounded">
+            <div class="p-4 bg-primary text-inverse rounded">.flex .justify-between</div>
+            <div class="p-4 bg-secondary text-inverse rounded">.items-center</div>
+            <div class="p-4 bg-success text-inverse rounded">.flex-wrap</div>
+          </div>
+        </div>
+      </section>
+  
+  
+      <!-- Dark Mode Demo -->
+      <section id="dark-demo" class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Dark Mode Demo</h2>
+        <div class="container mb-4">
+          <p class="mb-4">Click the button below to toggle between light and dark themes:</p>
+          <button id="darkToggle" class="btn btn-primary btn-sm mb-6">
+            Switch to Dark Mode
+          </button>
+          <div class="p-6 rounded border text-center">
+            <strong>Theme class on &lt;body&gt;:</strong>
+            <code class="block mb-2" id="currentTheme">theme-light</code>
+         
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-surface-sunken py-8 border-t">
@@ -336,5 +393,26 @@
             </div>
         </div>
     </footer>
+   <!-- Dark Mode Toggle Script -->
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    const body   = document.body;
+    const label  = document.getElementById('currentTheme');
+
+    function updateToggle() {
+      const isDark = body.classList.contains('theme-dark');
+      toggle.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+      label.textContent = isDark ? 'theme-dark' : 'theme-light';
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('theme-dark');
+      body.classList.toggle('theme-light');
+      updateToggle();
+    });
+
+    // initialize
+    updateToggle();
+  </script>
 </body>
 </html>
